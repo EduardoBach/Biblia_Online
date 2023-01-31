@@ -2,7 +2,10 @@ function pesquisar(){
     var texto = document.getElementById("biblia")
     let cap = Math.floor(Math.random() * 15)
     let vers = Math.floor(Math.random() * 10)
-    var chapters =["mt","mc","lc","jo","at","rm","1co","2co","gl","ef","fp","cl","1ts","2ts",
+    var chapters =["gn","ex","lv","nm","dt","js","jz","rt","1sm","2sm","1rs","2rs",
+    "1cr","2cr","ed","ne","et","jo","sl","pv","ec","ct","is","jr","lm","ez","dn","os","jl","am",
+    "ob","jn","mq","na","hc","sf","ag","zc","ml",
+    "mt","mc","lc","jo","at","rm","1co","2co","gl","ef","fp","cl","1ts","2ts",
     "1tm","2tm","tt","fm","hb","tg","1pe","2pe","1jo","2jo","3jo","jd","ap"]
     var sort = Math.floor(Math.random() * chapters.length);
 
