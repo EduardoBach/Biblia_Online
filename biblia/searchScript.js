@@ -12,7 +12,6 @@ function achar(){
         realCaps = caps - 1
         
         see.innerHTML = data.verses[realCaps].text
-        console.log(data.verses[realCaps].text)
     })
     
 }
