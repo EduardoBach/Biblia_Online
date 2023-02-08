@@ -7,7 +7,12 @@ function achar(){
     fetch(gnURL).then((resp)=>{
         return resp.json()
     }).then((data)=>{
-        console.log(data)
+        
+        caps = genesis.value
+        realCaps = caps - 1
+        
+        see.innerHTML = data.verses[realCaps].text
+        console.log(data.verses[realCaps].text)
     })
     
 }
