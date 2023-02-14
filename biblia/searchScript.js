@@ -8,10 +8,26 @@ function achar(){
         return resp.json()
     }).then((data)=>{
         
-        caps = genesis.value
-        realCaps = caps - 1
+      var caps = genesis.value
+      var realCaps = caps - 1
         
         see.innerHTML = data.verses[realCaps].text
     })
     
+}
+
+function acharEx(){
+    var exodo = document.getElementById("exBible")
+    var see = document.getElementById("bibleTextex")
+
+    var exURL = `https://www.abibliadigital.com.br/api/verses/nvi/ex/1`
+
+    fetch(exURL).then((resp)=>{
+        return resp.json()
+    }).then((data)=>{
+        var caps = exodo.value;
+        var realCaps = caps - 1
+
+        see.innerHTML = data.verses[realCaps].text
+    })
 }
