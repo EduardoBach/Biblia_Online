@@ -13,6 +13,10 @@
         body {
           background-color: #333;
         }
+
+        p{
+          font-family: 'Open Sans', sans-serif;
+        }
         
         #bibleText {
     font-family: 'Open Sans', sans-serif;
@@ -38,9 +42,11 @@
           font-weight: bold;
           margin-bottom: 20px;
           color: #333;
+          font-family: 'Open Sans', sans-serif;
         }
         
         input[type="number"] {
+          font-family: 'Open Sans', sans-serif;
           width: 60%;
           height: 30px;
           padding: 10px;
@@ -71,8 +77,8 @@
     <details>
         <summary>Genesis</summary>
         <p>Digite o seu capitulo</p>
-        <input type="number" placeholder="Capitulo" name="caps" id="gnBible">
-        <input type="number" placeholder="Verso" name="caps" id="gnVerseBible">
+        <input type="number" placeholder="Versiculo" name="caps" id="gnBible">
+        <input type="number" placeholder="Numero" name="caps" id="gnVerseBible">
         <button onclick="achar()" type="submit">Ver</button>
     </details>
     <h1 style="color: #e64d00;" id="bibleText"></h1>
@@ -80,7 +86,8 @@
     <details>
       <summary>Êxodo</summary>
       <p>Digite o seu capitulo</p>
-      <input type="number" name="caps" id="exBible">
+      <input type="number" placeholder="Versiculo" name="caps" id="exBible">
+      <input type="number" placeholder="Numero" name="caps" id="exVerseBible">
       <button onclick="acharEx()" type="submit">Ver</button>
   </details>
     <h1 style="color: #e64d00;" id="bibleTextex"></h1>
