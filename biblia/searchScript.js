@@ -46,3 +46,19 @@ function acharLev(){
         see.innerHTML = data.text;
     })
 }
+
+function acharNm(){
+    var numeros = document.getElementById("nmBible")
+    var see = document.getElementById("bibleTextnm")
+    var verse = document.getElementById("nmVerseBible")
+    var verseReal = verse.value;
+    var numerosReal = numeros.value;
+
+    var nmURL = `https://www.abibliadigital.com.br/api/verses/nvi/nm/${numerosReal}/${verseReal}`
+
+    fetch(nmURL).then((resp)=>{
+        return resp.json()
+    }).then((data)=>{
+        see.innerHTML = data.text;
+    })
+}
