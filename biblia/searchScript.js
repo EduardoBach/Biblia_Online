@@ -30,3 +30,19 @@ function acharEx(){
     see.innerHTML = data.text;
    })
 }
+
+function acharLev(){
+    var levitico = document.getElementById("levBible")
+    var see = document.getElementById("bibleTextlev")
+    var verse = document.getElementById("levVerseBible")
+    var verseReal = verse.value;
+    var leviticoReal = levitico.value;
+
+    var levURL = `https://www.abibliadigital.com.br/api/verses/nvi/lv/${leviticoReal}/${verseReal}`
+
+    fetch(levURL).then((resp)=>{
+        return resp.json()
+    }).then((data)=>{
+        see.innerHTML = data.text;
+    })
+}
