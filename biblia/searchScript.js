@@ -62,3 +62,19 @@ function acharNm(){
         see.innerHTML = data.text;
     })
 }
+
+function acharDt(){
+    var deuteronomio = document.getElementById("dtBible")
+    var see = document.getElementById("bibleTextdt")
+    var verse = document.getElementById("dtVerseBible")
+    var verseReal = verse.value;
+    var deuteronomioReal = deuteronomio.value;
+
+    var dtURL = `https://www.abibliadigital.com.br/api/verses/nvi/dt/${deuteronomioReal}/${verseReal}`
+
+    fetch(dtURL).then((resp)=>{
+        return resp.json()
+    }).then((data)=>{
+        see.innerHTML = data.text;
+    })
+}
