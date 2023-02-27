@@ -78,3 +78,19 @@ function acharDt(){
         see.innerHTML = data.text;
     })
 }
+
+function acharJs(){
+    var josue = document.getElementById("jsBible")
+    var see = document.getElementById("bibleTextjs")
+    var verse = document.getElementById("jsVerseBible")
+    var verseReal = verse.value;
+    var josueReal = josue.value;
+
+    var jsURL = `https://www.abibliadigital.com.br/api/verses/nvi/dt/${josueReal}/${verseReal}`
+
+    fetch(jsURL).then((resp)=>{
+        return resp.json()
+    }).then((data)=>{
+        see.innerHTML = data.text;
+    })
+}
