@@ -86,9 +86,25 @@ function acharJs(){
     var verseReal = verse.value;
     var josueReal = josue.value;
 
-    var jsURL = `https://www.abibliadigital.com.br/api/verses/nvi/dt/${josueReal}/${verseReal}`
+    var jsURL = `https://www.abibliadigital.com.br/api/verses/nvi/js/${josueReal}/${verseReal}`
 
     fetch(jsURL).then((resp)=>{
+        return resp.json()
+    }).then((data)=>{
+        see.innerHTML = data.text;
+    })
+}
+
+function acharJz(){
+    var juizes = document.getElementById("jzBible")
+    var see = document.getElementById("bibleTextjz")
+    var verse = document.getElementById("jzVerseBible")
+    var verseReal = verse.value;
+    var juizesReal = juizes.value;
+
+    var jzURL = `https://www.abibliadigital.com.br/api/verses/nvi/jz/${juizesReal}/${verseReal}`
+
+    fetch(jzURL).then((resp)=>{
         return resp.json()
     }).then((data)=>{
         see.innerHTML = data.text;
