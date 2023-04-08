@@ -1,112 +1,14 @@
-function achar(){
-    var genesis = document.getElementById("gnBible")
-    var see = document.getElementById("bibleText")
-    var verse = document.getElementById("gnVerseBible")
-    var verseValue = verse.value;
-    var genesisReal = genesis.value
-
-    var gnURL = `https://www.abibliadigital.com.br/api/verses/nvi/gn/${genesisReal}/${verseValue}`
-
-    fetch(gnURL).then((resp)=>{
-        return resp.json()
-    }).then((data)=>{
-        see.innerHTML = data.text;
-    })
-    
+async function buscarVersiculo() {
+    const livro = document.getElementById('livro').value
+    const capitulo = document.getElementById('capitulo').value
+    const versiculo = document.getElementById('versiculo').value
+    const elemento = document.getElementById('resultado')
+    await acharLivro(livro, capitulo, versiculo, elemento)
 }
 
-function acharEx(){
-   var exodo = document.getElementById("exBible")
-   var see = document.getElementById("bibleTextex")
-   var verse = document.getElementById("exVerseBible")
-   var verseReal = verse.value;
-   var exodoReal = exodo.value;
-
-   var exURL = `https://www.abibliadigital.com.br/api/verses/nvi/gn/${exodoReal}/${verseReal}`
-
-   fetch(exURL).then((resp)=>{
-    return resp.json()
-   }).then((data)=>{
-    see.innerHTML = data.text;
-   })
-}
-
-function acharLev(){
-    var levitico = document.getElementById("levBible")
-    var see = document.getElementById("bibleTextlev")
-    var verse = document.getElementById("levVerseBible")
-    var verseReal = verse.value;
-    var leviticoReal = levitico.value;
-
-    var levURL = `https://www.abibliadigital.com.br/api/verses/nvi/lv/${leviticoReal}/${verseReal}`
-
-    fetch(levURL).then((resp)=>{
-        return resp.json()
-    }).then((data)=>{
-        see.innerHTML = data.text;
-    })
-}
-
-function acharNm(){
-    var numeros = document.getElementById("nmBible")
-    var see = document.getElementById("bibleTextnm")
-    var verse = document.getElementById("nmVerseBible")
-    var verseReal = verse.value;
-    var numerosReal = numeros.value;
-
-    var nmURL = `https://www.abibliadigital.com.br/api/verses/nvi/nm/${numerosReal}/${verseReal}`
-
-    fetch(nmURL).then((resp)=>{
-        return resp.json()
-    }).then((data)=>{
-        see.innerHTML = data.text;
-    })
-}
-
-function acharDt(){
-    var deuteronomio = document.getElementById("dtBible")
-    var see = document.getElementById("bibleTextdt")
-    var verse = document.getElementById("dtVerseBible")
-    var verseReal = verse.value;
-    var deuteronomioReal = deuteronomio.value;
-
-    var dtURL = `https://www.abibliadigital.com.br/api/verses/nvi/dt/${deuteronomioReal}/${verseReal}`
-
-    fetch(dtURL).then((resp)=>{
-        return resp.json()
-    }).then((data)=>{
-        see.innerHTML = data.text;
-    })
-}
-
-function acharJs(){
-    var josue = document.getElementById("jsBible")
-    var see = document.getElementById("bibleTextjs")
-    var verse = document.getElementById("jsVerseBible")
-    var verseReal = verse.value;
-    var josueReal = josue.value;
-
-    var jsURL = `https://www.abibliadigital.com.br/api/verses/nvi/js/${josueReal}/${verseReal}`
-
-    fetch(jsURL).then((resp)=>{
-        return resp.json()
-    }).then((data)=>{
-        see.innerHTML = data.text;
-    })
-}
-
-function acharJz(){
-    var juizes = document.getElementById("jzBible")
-    var see = document.getElementById("bibleTextjz")
-    var verse = document.getElementById("jzVerseBible")
-    var verseReal = verse.value;
-    var juizesReal = juizes.value;
-
-    var jzURL = `https://www.abibliadigital.com.br/api/verses/nvi/jz/${juizesReal}/${verseReal}`
-
-    fetch(jzURL).then((resp)=>{
-        return resp.json()
-    }).then((data)=>{
-        see.innerHTML = data.text;
-    })
+async function acharLivro(livro, capitulo, versiculo, elemento) {
+    const url = `https://www.abibliadigital.com.br/api/verses/nvi/${livro}/${capitulo}/${versiculo}`
+    const response = await fetch(url)
+    const data = await response.json()
+    elemento.innerHTML = data.text
 }
