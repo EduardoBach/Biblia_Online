@@ -2,4 +2,4 @@
 
 <p> Um projeto usando uma API da biblia, estou montando um sistema de busca onde você possa procurar o versiculo que você deseja</p>
 
-<p>Por enquanto sem nenhum estilo, apenas html e js </p>
+<p>Na pagina de busca já está feito um pouco do css, porém na inicial ainda não </p>
