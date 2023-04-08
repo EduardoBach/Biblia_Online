@@ -10,68 +10,22 @@
 </head>
 <body>
     
-    <details>
-        <summary>Genesis</summary>
-        <p>Digite o seu capitulo</p>
-        <input type="number" placeholder="Versiculo" name="caps" id="gnBible">
-        <input type="number" placeholder="Numero" name="caps" id="gnVerseBible">
-        <button onclick="achar()" type="submit">Ver</button>
-    </details>
-    <h1 style="color: #e64d00;" id="bibleText"></h1>
+  <h1>Bíblia</h1>
 
-    <details>
-      <summary>Êxodo</summary>
-      <p>Digite o seu capitulo</p>
-      <input type="number" placeholder="Versiculo" name="caps" id="exBible">
-      <input type="number" placeholder="Numero" name="caps" id="exVerseBible">
-      <button onclick="acharEx()" type="submit">Ver</button>
-  </details>
-    <h1 style="color: #e64d00;" id="bibleTextex"></h1>
-
-    <details>
-        <summary>Levítico</summary>
-        <p>Digite o seu capitulo</p>
-        <input type="number" placeholder="Versiculo" name="caps" id="levBible">
-        <input type="number" placeholder="Numero" name="caps" id="levVerseBible">
-        <button onclick="acharLev()" type="submit">Ver</button>
-    </details>
-      <h1 style="color: #e64d00;" id="bibleTextlev"></h1>
-
-      <details>
-        <summary>Números</summary>
-        <p>Digite o seu capitulo</p>
-        <input type="number" placeholder="Versiculo" name="caps" id="nmBible">
-        <input type="number" placeholder="Numero" name="caps" id="nmVerseBible">
-        <button onclick="acharNm()" type="submit">Ver</button>
-    </details>
-      <h1 style="color: #e64d00;" id="bibleTextnm"></h1>
-
-      <details>
-        <summary>Deuteronômio</summary>
-        <p>Digite o seu capitulo</p>
-        <input type="number" placeholder="Versiculo" name="caps" id="dtBible">
-        <input type="number" placeholder="Numero" name="caps" id="dtVerseBible">
-        <button onclick="acharDt()" type="submit">Ver</button>
-    </details>
-      <h1 style="color: #e64d00;" id="bibleTextdt"></h1>
-
-      <details>
-        <summary>Josué</summary>
-        <p>Digite o seu capitulo</p>
-        <input type="number" placeholder="Versiculo" name="caps" id="jsBible">
-        <input type="number" placeholder="Numero" name="caps" id="jsVerseBible">
-        <button onclick="acharJs()" type="submit">Ver</button>
-    </details>
-      <h1 style="color: #e64d00;" id="bibleTextjs"></h1>
-
-      <details>
-        <summary>Juízes</summary>
-        <p>Digite o seu capitulo</p>
-        <input type="number" placeholder="Versiculo" name="caps" id="jzBible">
-        <input type="number" placeholder="Numero" name="caps" id="jzVerseBible">
-        <button onclick="acharJz()" type="submit">Ver</button>
-    </details>
-      <h1 style="color: #e64d00;" id="bibleTextjz"></h1>
+  <form>
+    <label for="livro">Livro:</label>
+    <input type="text" id="livro">
+  
+    <label for="capitulo">Capítulo:</label>
+    <input type="text" id="capitulo">
+  
+    <label for="versiculo">Versículo:</label>
+    <input type="text" id="versiculo">
+  
+    <button type="button" onclick="buscarVersiculo()">Buscar</button>
+  </form>
+  
+  <div id="resultado"></div>
 
     <script src="./searchScript.js"></script>
 </body>
