@@ -1,9 +1,7 @@
-/* Define uma fonte padrão para o documento */
 body {
   font-family: Arial, sans-serif;
 }
 
-/* Define um estilo para o cabeçalho */
 h1 {
   text-align: center;
   font-size: 3rem;
@@ -11,7 +9,6 @@ h1 {
   margin-bottom: 2rem;
 }
 
-/* Define um estilo para o formulário */
 form {
   display: flex;
   flex-wrap: wrap;
@@ -21,7 +18,6 @@ form {
   margin: 0 auto;
 }
 
-/* Define um estilo para as etiquetas */
 label {
   display: block;
   margin-bottom: 0.5rem;
@@ -29,7 +25,6 @@ label {
   font-weight: bold;
 }
 
-/* Define um estilo para as entradas */
 input[type="text"] {
   padding: 0.5rem;
   font-size: 1rem;
@@ -40,7 +35,6 @@ input[type="text"] {
   margin-bottom: 1rem;
 }
 
-/* Define um estilo para o botão */
 button[type="button"] {
   padding: 0.5rem 1rem;
   background-color: #007bff;
@@ -51,7 +45,6 @@ button[type="button"] {
   cursor: pointer;
 }
 
-/* Define um estilo para o resultado */
 #resultado {
   margin-top: 2rem;
   text-align: center;
