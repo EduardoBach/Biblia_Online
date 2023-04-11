@@ -1,11 +1,9 @@
-/* Reset das propriedades padrão */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
   
-  /* Estilos do container */
   .container {
     max-width: 800px;
     margin: 0 auto;
@@ -16,7 +14,6 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Estilos do cabeçalho */
   .header {
     display: flex;
     align-items: center;
@@ -48,7 +45,6 @@
     background-color: #3e8e41;
   }
   
-  /* Estilos do conteúdo */
   .content {
     background-color: white;
     padding: 20px;
@@ -70,7 +66,6 @@
     font-size: 24px;
   }
   
-  /* Estilos do rodapé */
   .footer {
     text-align: center;
     margin-top: 20px;
