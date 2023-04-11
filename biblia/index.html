@@ -5,16 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holy.Bible</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-    <input onclick="pesquisar()" id="pesquisar" type="submit" value="Versiculo Aleatorio">
-    <h2 id="biblia"></h2>
-    <h3 id="sigla"></h3>
-    <h3 id="numberCap"></h3>
-    <h3 id="numberVers"></h3>
+    <div class="container">
+        <div class="header">
+          <h1>Versículo Aleatório</h1>
+          <input onclick="pesquisar()" id="pesquisar" type="submit" value="Gerar">
+        </div>
+        <div class="content">
+          <h2 id="biblia"></h2>
+          <h3 id="sigla"></h3>
+          <h3 id="numberCap"></h3>
+          <h3 id="numberVers"></h3>
+        </div>
+        <div class="footer">
+          <a href="./search.html">Procurar Versículo Específico</a>
+        </div>
+      </div>
+      
 
-    <a href="./search.html">Procurar Versiculo Especifico</a>
 
     <script src="./script.js"></script>
 </body>
