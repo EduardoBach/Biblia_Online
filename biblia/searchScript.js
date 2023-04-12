@@ -1,3 +1,9 @@
+
+const search = document.getElementById("searchBtn")
+    search.addEventListener("click", buscarVersiculo)
+
+
+
 async function buscarVersiculo() {
     const livro = document.getElementById('livro').value
     const capitulo = document.getElementById('capitulo').value
