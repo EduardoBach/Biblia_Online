@@ -43,6 +43,8 @@ button[type="button"] {
   border-radius: 0.5rem;
   font-size: 1.2rem;
   cursor: pointer;
+  margin-left: 100px;
+  margin-bottom: 14px;
 }
 
 button[type="button"]:hover{
@@ -54,4 +56,13 @@ button[type="button"]:hover{
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+#arrowButtons{
+  border-radius: 10px;
+  width: 99%;
+  height: 25px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
 }
