@@ -15,8 +15,11 @@ async function acharLivro(livro, capitulo, versiculo, elemento) {
     const response = await fetch(url)
     const data = await response.json()
     elemento.innerHTML = data.text
+    arrowBtn.style.display = "flex"
+    arrowBtn.style.justifyContent = "space-between"
 }
 
+const arrowBtn = document.getElementById("arrowButtons")
 const botaoAvanca = document.getElementById('foward');
 const botaoRetrocede = document.getElementById('back');
 const campoVersiculo = document.getElementById('versiculo');
@@ -30,5 +33,3 @@ botaoRetrocede.addEventListener('click', () => {
   campoVersiculo.value = parseInt(campoVersiculo.value) - 1;
   buscarVersiculo();
 });
-
-

@@ -63,6 +63,5 @@ button[type="button"]:hover{
   width: 99%;
   height: 25px;
   position: fixed;
-  display: flex;
-  justify-content: space-between;
+  display: none;
 }
