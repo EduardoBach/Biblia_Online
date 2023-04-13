@@ -11,13 +11,18 @@ async function buscarVersiculo() {
 }
 
 async function acharLivro(livro, capitulo, versiculo, elemento) {
-    const url = `https://www.abibliadigital.com.br/api/verses/nvi/${livro}/${capitulo}/${versiculo}`
-    const response = await fetch(url)
-    const data = await response.json()
+  const url = `https://www.abibliadigital.com.br/api/verses/nvi/${livro}/${capitulo}/${versiculo}`
+  const response = await fetch(url)
+  const data = await response.json()
+  if (data.text === undefined) {
+    elemento.innerHTML = "Versículo inexistente."
+  } else {
     elemento.innerHTML = data.text
-    arrowBtn.style.display = "flex"
-    arrowBtn.style.justifyContent = "space-between"
+  }
+  arrowBtn.style.display = "flex"
+  arrowBtn.style.justifyContent = "space-between"
 }
+
 
 const arrowBtn = document.getElementById("arrowButtons")
 const botaoAvanca = document.getElementById('foward');
