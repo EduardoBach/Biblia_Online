@@ -101,6 +101,7 @@ background-color:#00a6a3;
   position: absolute;
   margin-top: 595px;
   margin-left: 2px;
+  display: none;
 }
 
 #foward{
