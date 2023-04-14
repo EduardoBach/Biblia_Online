@@ -1,3 +1,9 @@
+var search = document.getElementById("pesquisar")
+var maxTries = 10
+var tryCount = 0
+
+search.addEventListener("click", pesquisar)
+
 function pesquisar(){
     var texto = document.getElementById("biblia")
     let cap = Math.floor(Math.random() * 15)
@@ -11,11 +17,23 @@ function pesquisar(){
 
     let url = `https://www.abibliadigital.com.br/api/verses/nvi/${chapters[sort]}/${cap}/${vers}`
 
-        fetch(url).then((resp)=>{
-            return resp.json()
-        }).then((data)=>{
+    fetch(url)
+    .then((resp) => {
+        return resp.json()
+    })
+    .then((data) => {
+        if (data && data.text) {
             texto.innerHTML = data.text
-        })
+        } else {
+            tryCount++
+            if (tryCount < maxTries) {
+                pesquisar()
+            } else {
+                texto.innerHTML = "Não foi possível obter um versículo da Bíblia. Tente novamente."
+            }
+        }
+    })
+
 
     var sigla = document.getElementById("sigla")
     var numberCap = document.getElementById("numberCap")
@@ -28,6 +46,5 @@ function pesquisar(){
     numberVers.innerHTML = vers
 
 }
-
 
 
