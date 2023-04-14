@@ -100,11 +100,23 @@ background-color:#00a6a3;
 #arrowButtons{
   position: absolute;
   margin-top: 595px;
-  margin-left: 16px;
-  display: none;
+  margin-left: 2px;
 }
 
 #foward{
   position: absolute;
-  margin-left: 710px;
+  margin-left: 735px;
+  border-radius: 100px;
+  width: 35px;
+  height: 35px;
+  background-color: black;
+  color: white;
+}
+
+#back{
+  border-radius: 100px;
+  width: 35px;
+  height: 35px;
+  background-color: black;
+  color: white;
 }
