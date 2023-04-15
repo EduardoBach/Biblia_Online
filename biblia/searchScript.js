@@ -1,9 +1,9 @@
-const search = document.getElementById("searchBtn")
+var search = document.getElementById("searchBtn")
 search.addEventListener("click", buscarVersiculo)
 
 async function buscarVersiculo() {
-  const livro = document.getElementById('livro').value
-  let abreviacaoLivro = ''
+  var livro = document.getElementById('livro').value
+  var abreviacaoLivro = ''
   switch (livro.toLowerCase()) {
     case 'genesis':
       abreviacaoLivro = 'gn'
@@ -211,9 +211,9 @@ async function buscarVersiculo() {
       alert('Livro não encontrado')
       return
   }
-  const capitulo = document.getElementById('capitulo').value
-  const versiculo = document.getElementById('versiculo').value
-  const elemento = document.getElementById('resultado')
+  var capitulo = document.getElementById('capitulo').value
+  var versiculo = document.getElementById('versiculo').value
+  var elemento = document.getElementById('resultado')
   await acharLivro(abreviacaoLivro, capitulo, versiculo, elemento)
 }
 
