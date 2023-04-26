@@ -41,9 +41,9 @@ function pesquisar(){
 
     var ss = chapters[sort]
 
-    sigla.innerHTML = ss.charAt(0).toUpperCase() + ss.slice(1);
-    numberCap.innerHTML = cap
-    numberVers.innerHTML = vers
+    sigla.innerHTML = "Livro: " + ss.charAt(0).toUpperCase() + ss.slice(1);
+    numberCap.innerHTML = "Capitulo: " + cap
+    numberVers.innerHTML = "Numero: " + vers
 
 }
 
