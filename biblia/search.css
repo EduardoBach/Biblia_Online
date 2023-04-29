@@ -121,3 +121,18 @@ background-color:#00a6a3;
   background-color: black;
   color: white;
 }
+
+.voltar-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #ccc;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.voltar-btn:hover {
+  background-color: #999;
+}
