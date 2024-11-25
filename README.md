@@ -1,6 +1,6 @@
 # Recipe Vault
 
-**Receita Aleatória** é um projeto web que permite aos usuários explorar e descobrir receitas de forma fácil e divertida. Com uma interface minimalista e intuitiva, você pode buscar receitas específicas ou gerar uma receita aleatória com apenas um clique.
+**Recipe Vault** é um projeto web que permite aos usuários explorar e descobrir receitas de forma fácil e divertida. Com uma interface minimalista e intuitiva, você pode buscar receitas específicas ou gerar uma receita aleatória com apenas um clique.
 
 ---
 
