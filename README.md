@@ -1,5 +1,27 @@
-# Biblia Online
+# Receita Aleatória
 
-<p> Um projeto usando uma API da biblia,  montei um sistema de busca onde você pode procurar o versiculo que você deseja, ou até mesmo gerar um aleatorio</p>
+**Receita Aleatória** é um projeto web que permite aos usuários explorar e descobrir receitas de forma fácil e divertida. Com uma interface minimalista e intuitiva, você pode buscar receitas específicas ou gerar uma receita aleatória com apenas um clique.
 
-<img src="/images/website.png" alt="">
+---
+
+## 🚀 Funcionalidades
+
+- **Buscar Receitas:** Encontre receitas pelo nome rapidamente.
+- **Receita Aleatória:** Gere receitas aleatórias para se inspirar.
+- **Interface Minimalista:** Design clean e moderno, focado na experiência do usuário.
+
+---
+
+
+## 🛠️ Tecnologias Utilizadas
+
+- **HTML5** — Estrutura da aplicação
+- **CSS3** — Estilização e layout
+- **JavaScript (Vanilla)** — Funcionalidade e interatividade
+- **API TheMealDB** — Fonte dos dados de receitas
+
+---
+
+## 🔗 API Utilizada
+
+-O projeto utiliza a TheMealDB API para obter receitas de forma dinâmica.
