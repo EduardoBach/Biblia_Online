@@ -1,31 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holy.Bible</title>
+    <title>Pesquisar Receita</title>
+    <link rel="stylesheet" href="search.css">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <!-- Página de Boas-vindas -->
+  <div class="aboutPage">
     <div class="container">
-        <div class="header">
-          <h1>Versículo Aleatório</h1>
-          <input id="pesquisar" type="submit" value="Gerar">
-        </div>
-        <div class="content">
-          <h2 id="biblia"></h2>
-          <h3 id="sigla"></h3>
-          <h3 id="numberCap"></h3>
-          <h3 id="numberVers"></h3>
-        </div>
-        <div class="footer">
-          <a href="./search.html">Procurar Versículo Específico</a>
-        </div>
-      </div>
+        <h1 class="titlePage">Bem-vindo ao Mundo das Receitas!</h1>
+        <p>Descubra receitas incríveis e deliciosas. Pesquise pelo nome e aprenda a cozinhar com facilidade!</p>
+    </div>
+  </div>
 
-    <script src="./script.js"></script>
+  <!-- Input de busca -->
+  <div class="inputs">
+    <input placeholder="Nome da Receita" type="text" id="recipeName">
+    <a href="#" id="searchBtn">Buscar Receita</a>
+  </div>
+
+  <!-- Botão para gerar receita aleatória -->
+  <div class="random-recipe">
+    <a href="random.html" id="randomRecipeBtn" class="btn">Gerar Receita Aleatória</a>
+  </div>
+
+  <!-- Resultado da busca -->
+  <div id="resultado"></div>
+
+
+  <script src="./script.js"></script>
 </body>
 </html>

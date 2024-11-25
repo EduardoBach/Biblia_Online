@@ -1,50 +1,35 @@
-var search = document.getElementById("pesquisar")
-var maxTries = 10
-var tryCount = 0
+document.getElementById("searchBtn").addEventListener("click", buscarReceita);
 
-search.addEventListener("click", pesquisar)
+async function buscarReceita() {
+  const recipeName = document.getElementById('recipeName').value.trim();
+  const elemento = document.getElementById('resultado');
 
-function pesquisar(){
-    var texto = document.getElementById("biblia")
-    let cap = Math.floor(Math.random() * 15)
-    let vers = Math.floor(Math.random() * 10)
-    var chapters =["gn","ex","lv","nm","dt","js","jz","rt","1sm","2sm","1rs","2rs",
-    "1cr","2cr","ed","ne","et","jo","sl","pv","ec","ct","is","jr","lm","ez","dn","os","jl","am",
-    "ob","jn","mq","na","hc","sf","ag","zc","ml",
-    "mt","mc","lc","jo","at","rm","1co","2co","gl","ef","fp","cl","1ts","2ts",
-    "1tm","2tm","tt","fm","hb","tg","1pe","2pe","1jo","2jo","3jo","jd","ap"]
-    var sort = Math.floor(Math.random() * chapters.length);
+  if (recipeName === '') {
+    alert('Por favor, insira o nome da receita.');
+    return;
+  }
 
-    let url = `https://www.abibliadigital.com.br/api/verses/nvi/${chapters[sort]}/${cap}/${vers}`
+  const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(recipeName)}`;
 
-    fetch(url)
-    .then((resp) => {
-        return resp.json()
-    })
-    .then((data) => {
-        if (data && data.text) {
-            texto.innerHTML = data.text
-        } else {
-            tryCount++
-            if (tryCount < maxTries) {
-                pesquisar()
-            } else {
-                texto.innerHTML = "Não foi possível obter um versículo da Bíblia. Tente novamente."
-            }
-        }
-    })
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
 
+    if (!data.meals) {
+      elemento.innerHTML = 'Receita não encontrada.';
+      return;
+    }
 
-    var sigla = document.getElementById("sigla")
-    var numberCap = document.getElementById("numberCap")
-    var numberVers = document.getElementById("numberVers")
-
-    var ss = chapters[sort]
-
-    sigla.innerHTML = "Livro: " + ss.charAt(0).toUpperCase() + ss.slice(1);
-    numberCap.innerHTML = "Capitulo: " + cap
-    numberVers.innerHTML = "Numero: " + vers
-
+    const receita = data.meals[0];
+    elemento.innerHTML = `
+      <h2>${receita.strMeal}</h2>
+      <img src="${receita.strMealThumb}" alt="${receita.strMeal}" style="width: 300px;"/>
+      <p><strong>Categoria:</strong> ${receita.strCategory}</p>
+      <p><strong>Origem:</strong> ${receita.strArea}</p>
+      <p><strong>Instruções:</strong> ${receita.strInstructions}</p>
+    `;
+  } catch (error) {
+    elemento.innerHTML = 'Ocorreu um erro ao buscar a receita.';
+    console.error('Erro:', error);
+  }
 }
-
-

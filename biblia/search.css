@@ -1,138 +1,128 @@
+/* Resetando margens e padding para garantir consistência */
 * {
-  padding: 0;
   margin: 0;
-  font-family: 'Kanit', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.aboutPage {
-  position: absolute;
-  margin-left: 109.9vh;
+body {
+  font-family: 'Kanit', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 46.6%;
-  height: 100vh;
-  background-image: linear-gradient(to top right, aqua, rgb(0, 158, 158));
-}
-
-.container {
-  width: 450px;
-  height: 320px;
-  text-align: center;
-  color: white;
-}
-
-.titlePage{
-  font-size: 45px;
-  height: 70px;
-}
-
-p{
-  font-size: 25px;
-  text-align: justify;
-}
-
-.bible{
-  position: absolute;
-  margin-left: 320px;
-  margin-top: 150px;
-  font-size: 45px;
-}
-
-.inputs{
-  position: absolute;
-  width: 400px;
-  height: 290px;
-  margin-left: 160px;
-  margin-top: 250px;
-}
-
-input{
-  padding: 8px;
-      font-size: 20px;
-      width: 100%;
-      border-width: 1px;
-      border-color: #6b6b6b;
-      background-color: #FFFFFF;
-      color: #00f8ff;
-      text-align: left;
-      border-style: solid;
-      border-radius: 50px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      text-shadow: -50px 0px 0px rgba(66,66,66,.0);
-      margin: 10px;
-}
-
-input:focus{
-  outline:none;
-}
-
-#searchBtn{
-  box-shadow: 1px 1px 50px -4px #949494;
-background:linear-gradient(to bottom, #00fffb 5%, #00a6a3 100%);
-border-radius:42px;
-border:1px solid #4a6d73;
-display:inline-block;
-cursor:pointer;
-color:#ffffff;
-font-size:21px;
-padding:10px 72px;
-text-decoration:none;
-  margin: 18px 100px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#searchBtn:hover{
-  background:linear-gradient(to bottom, #00a6a3 5%, #00fffb 100%);
-background-color:#00a6a3;
-}
-
-#resultado{
-  position: absolute;
-  width: 700px;
-  height: 40px;
-  margin-top: 580px;
-  margin-left: 37px;
-  font-size: 30px;
+  min-height: 100vh;
   text-align: center;
 }
 
-#arrowButtons{
-  position: absolute;
-  margin-top: 595px;
-  margin-left: 2px;
-  display: none;
+/* Estilos para a página de boas-vindas */
+.aboutPage {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  padding: 2rem;
+  width: 80%;
+  max-width: 600px;
 }
 
-#foward{
-  position: absolute;
-  margin-left: 735px;
-  border-radius: 100px;
-  width: 35px;
-  height: 35px;
-  background-color: black;
-  color: white;
+.titlePage {
+  font-size: 2.5rem;
+  color: #3a3a3a;
+  margin-bottom: 1rem;
 }
 
-#back{
-  border-radius: 100px;
-  width: 35px;
-  height: 35px;
-  background-color: black;
-  color: white;
+.aboutPage p {
+  font-size: 1.2rem;
+  color: #555;
 }
 
-.voltar-btn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  padding: 10px 20px;
-  background-color: #ccc;
+/* Estilos para o campo de busca */
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.inputs input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #ddd;
   border-radius: 5px;
-  color: #fff;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.inputs input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Botão de buscar */
+#searchBtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.8rem 2rem;
   text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#searchBtn:hover {
+  background-color: #45a049;
+}
+
+/* Botão de receita aleatória */
+.random-recipe {
+  margin-top: 2rem;
+}
+
+#randomRecipeBtn {
+  background-color: #ff9800;
+  color: white;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#randomRecipeBtn:hover {
+  background-color: #fb8c00;
+  transform: translateY(-3px);
+}
+
+#randomRecipeBtn:active {
+  transform: translateY(1px);
+}
+
+/* Resultado */
+#resultado {
+  margin-top: 2rem;
+  background-color: #fff;
+  padding: 1rem;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão de voltar */
+.voltar-btn {
+  margin-top: 2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #4CAF50;
 }
 
 .voltar-btn:hover {
-  background-color: #999;
+  text-decoration: underline;
 }
